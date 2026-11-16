@@ -223,3 +223,24 @@ for t in all_tables(d.tables):
         print("author table cleaned:", len(t.rows), "rows")
         break
 d.save(HERE / "right_by_luck_apart.docx")
+
+# ---------- post-process 2: replace the nested author/abstract tables with simple centered paragraphs ----------
+from docx.enum.text import WD_ALIGN_PARAGRAPH as AL
+d = docx.Document(HERE / "right_by_luck_apart.docx")
+cell = d.tables[0].rows[1].cells[0]
+for t in list(cell._tc.iter(qn("w:tbl"))):
+    if t.getparent() is cell._tc: cell._tc.remove(t)
+for p in list(cell.paragraphs): p._element.getparent().remove(p._element)
+def cp(text, bold=False, italic=False, size=None, align=AL.CENTER, space_after=4):
+    p = cell.add_paragraph(); p.alignment = align
+    r = p.add_run(text); r.bold = bold; r.italic = italic
+    if size: r.font.size = Pt(size)
+    p.paragraph_format.space_after = Pt(space_after)
+    return p
+cp("Joel Suro Villalobos", bold=True, size=11, space_after=0); cp("AI Safety Mexico", size=10)
+cp("Claude (Opus 5.5)", bold=True, size=11, space_after=0); cp("Anthropic · secondary co-author (see LLM Usage Statement)", size=10)
+cp("With", bold=True, size=10, space_after=0); cp("Apart Research", size=10, space_after=10)
+cp("Abstract", bold=True, size=12)
+cp(ABSTRACT, size=10, align=AL.JUSTIFY, space_after=8)
+d.save(HERE / "right_by_luck_apart.docx")
+print("header rebuilt")
