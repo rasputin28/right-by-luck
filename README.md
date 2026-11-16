@@ -1,3 +1,5 @@
+<p align="center"><img src="paper/cover.png" alt="Right by Luck" width="560"></p>
+
 # Right by Luck: Measuring When a Language Model's Correct Answer Is Not Knowledge
 
 Joel Suro Villalobos (AI Safety Mexico, [aismx.org](https://www.aismx.org/en/)) · Claude (Anthropic, `claude-opus-5-5`; secondary co-author: coding, analysis, drafting, literature search)
