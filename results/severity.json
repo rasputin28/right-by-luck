@@ -1,0 +1,53 @@
+{
+ "rater_agreement": {
+  "n_options": 1002,
+  "exact": 0.5219560878243513,
+  "within1": 0.9550898203592815,
+  "spearman": 0.3109576460598427
+ },
+ "severity_distribution_all_wrong_options": {
+  "2.0": 37,
+  "3.0": 370,
+  "4.0": 593,
+  "5.0": 2
+ },
+ "expected_harm_luck": [
+  0.645,
+  [
+   0.463,
+   0.838
+  ]
+ ],
+ "expected_harm_noluck": [
+  0.434,
+  [
+   0.271,
+   0.605
+  ]
+ ],
+ "expected_harm_diff": [
+  0.211,
+  [
+   -0.012,
+   0.427
+  ]
+ ],
+ "severity_given_error_luck": [
+  3.404,
+  [
+   3.257,
+   3.551
+  ]
+ ],
+ "severity_given_error_noluck": [
+  3.22,
+  [
+   3.038,
+   3.421
+  ]
+ ],
+ "p_error_luck": 0.18951612903225806,
+ "p_error_noluck": 0.13486842105263158,
+ "n_luck": 248,
+ "n_noluck": 304
+}
