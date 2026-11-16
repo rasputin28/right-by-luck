@@ -97,7 +97,7 @@ The study was pre-registered (hypotheses, thresholds and design committed before
 
 \textbf{Fresh-fact control.} 100 organisations from Wikidata founded on or after 2026-03-01, more than a year after every tested model's training cutoff, asked ``In what country is X?''. Names that state the country are dropped. A model cannot know these facts, so every correct answer is luck by construction.
 
-\textbf{Models: old on purpose.} GPT-4o-mini (2024-07-18 snapshot), Llama-3.3-70B-Instruct and Qwen2.5-72B-Instruct via OpenRouter, with training cutoffs in 2023--2024 (to be confirmed from each model card). Older models stop gathering facts at their cutoff, so the fresh-fact control needs no race against time; the race applies to new models. Each call fixes the provider (OpenAI; CoreWeave, fp16; DeepInfra, fp8), disables fallbacks, and uses temperature 0, top-$p$ 1, seed 0. Every call is logged with provider, parameters, response id and time. We cannot control the provider's hardware, load balancing or batching, so we measure their effect (below).
+\textbf{Models: old on purpose.} GPT-4o-mini (2024-07-18 snapshot), Llama-3.3-70B-Instruct and Qwen2.5-72B-Instruct via OpenRouter, with knowledge cutoffs of October 2023 (OpenAI documentation), December 2023 (model card, as reported by Google Vertex AI) and about June 2024 (third-party listings; Qwen states none; released September 2024). Older models stop gathering facts at their cutoff, so the fresh-fact control needs no race against time; the race applies to new models. Each call fixes the provider (OpenAI; CoreWeave, fp16; DeepInfra, fp8), disables fallbacks, and uses temperature 0, top-$p$ 1, seed 0. Every call is logged with provider, parameters, response id and time. We cannot control the provider's hardware, load balancing or batching, so we measure their effect (below).
 
 \textbf{Prompts per item and model} (12; Appendix~B): neutral question with a 0--100 confidence; 4 rewordings; 3 neighbours; a \emph{control} (punctuation only); a \emph{pressure} prompt (``my manager is certain the answer is X''); a four-option \emph{decision}. For 100 items the identical neutral prompt is sent twice more (\emph{repeat}). In total 14{,}322 calls, plus 11{,}718 for a robustness run without the confidence request.
 
@@ -126,6 +126,27 @@ The study was pre-registered (hypotheses, thresholds and design committed before
 
 \section{Discussion}
 \textbf{What the results say.} Under rewordings that do not change the truth, a large share of correct answers flips, four times more often than noise. By the safety condition, these answers were not safe. Accuracy alone hides this: about a quarter of all answers that count as correct do not survive nearby changes. Default luck is visible where theory says it should be. Lucky answers trended toward worse decisions, and models lowered their confidence only modestly when they failed nearby.
+
+\begin{table}[t]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}l l Y@{}}
+\toprule
+Question & Pre-registered verdict & Strength of evidence (estimate, 95\% CI) \\
+\midrule
+Luck beyond noise & Inconclusive & \textbf{Strong, post hoc}: wording luck minus a per-check floor ($1-(1-e)^4$, $e$ = control rate) is $+23$ (12--34), $+30$ (20--39), $+23$ (11--35) points \\
+Default luck where expected & Inconclusive & \textbf{Strong, post hoc}: neighbour test, fallback minus open $+8.9$ (3.1--15.0) \\
+Fresh-fact control & Failed & Clear: only 42\% of known luck detected \\
+H1 luck $\to$ worse decisions & Inconclusive & Weak: $+6.4$ ($-0.8$ to 12.7), predicted direction \\
+H2 luck vs.\ honesty & Inconclusive & None: $+0.021$ AUC ($-0.050$ to 0.087) \\
+H3 confidence separates poorly & Inconclusive & Moderate: AUROC 0.67 (0.62--0.72), above chance, mostly below 0.70 \\
+H4 equal confidence when failing & Refuted & Clear: $-10.6$ ($-13.9$ to $-7.3$) \\
+\bottomrule
+\end{tabularx}
+\caption{Pre-registered verdicts are kept as they are. The last column says how strong the evidence is against ``no effect''; post-hoc rows were not pre-registered.}
+\label{tab:evidence}
+\end{table}
+
+\textbf{Verdicts and strength of evidence.} We keep every pre-registered verdict (Table~\ref{tab:evidence}). ``Inconclusive'' had two different causes. For the main number, the cause was our noise floor, not the size of the effect: the floor let noise act on all 7 checks and added two overlapping noise estimates. With a per-check floor applied to the rewording test only, wording luck is far above noise for every model. For H1--H3 the evidence itself is weak or absent; H1 points in the predicted direction, and H3 is close to the threshold.
 
 \textbf{What they do not say.} The pre-registered main number is inconclusive, and our noise floor was too conservative to be informative; future runs should pre-register a per-check floor. We cannot say models are lucky ``like humans''. A rewording failure could partly reflect rewording quality (the checker filtered but did not eliminate meaning drift). The decision tasks were often solvable without the fact (e.g.\ one person among three professions), which compresses H1 and H2. The answer to the Track~1 question is therefore open: in this pilot honesty and luck measures both predicted decisions weakly.
 
