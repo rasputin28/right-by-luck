@@ -3,3 +3,5 @@ data/sources/*.parquet
 __pycache__/
 explainer/*backup*.tex
 explainer/*.log
+apart_template/*.png
+apart_template/template*.docx
