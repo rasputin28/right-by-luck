@@ -110,7 +110,7 @@ The study was pre-registered (hypotheses, thresholds and design committed before
 \centering
 \begin{minipage}{0.49\linewidth}\centering\includegraphics[width=\linewidth]{fig1_categories.pdf}\end{minipage}\hfill
 \begin{minipage}{0.49\linewidth}\centering\includegraphics[width=\linewidth]{fig2_per_check.pdf}\end{minipage}
-\caption{\textbf{Left:} share of all answers per model (313 questions). Plain accuracy is blue plus orange; the anti-luck view counts only blue. \textbf{Right} (post hoc): failure rate per check among correct answers, pooled over models, with 95\% CIs. A rewording breaks a correct answer about four times as often as a punctuation-only control or an identical repeat.}
+\caption{\textbf{Left:} share of all answers per model (313 questions). Plain accuracy is blue plus orange; the anti-luck view counts only blue. \textbf{Right} (post hoc): failure rate per check among correct answers, pooled over models, with 95\% CIs. A rewording breaks a correct answer about four times as often as a punctuation-only control (17.0\% vs.\ 4.0\%) and five times as often as an identical repeat (3.3\%).}
 \label{fig:main}
 \end{figure}
 
@@ -127,7 +127,7 @@ The study was pre-registered (hypotheses, thresholds and design committed before
 \textbf{Robustness.} Asking for confidence did not drive the results: on the 313 confirmatory items without the request, neutral accuracy moved from 58.9\% to 60.4\%, correctness agreed on 92.5\% of neutral and rewording prompts, and wording luck was 40.3\% vs.\ 40.2\%. Accuracy on the original PopQA wording exceeded rewording accuracy by only $-1.1$ to 4.6 points, so memorised question strings play a small role.
 
 \section{Discussion}
-\textbf{What the results say.} Under rewordings that do not change the truth, a large share of correct answers flips, four times more often than noise. By the safety condition, these answers were not safe. Accuracy alone hides this: 43--48\% of correct answers (24\% once names are disambiguated) do not survive nearby changes. Default luck is visible where theory says it should be. Lucky answers trended toward worse decisions, and models lowered their confidence only modestly when they failed nearby.
+\textbf{What the results say.} Rewordings that do not change the truth break correct answers far more often than noise does: per check, 17.0\% against 4.0\% for the control (about four times), and 7.3\% against 1.4\% once names are disambiguated (about five times; these small rates make the ratio imprecise, so we rely on the differences, $+13.1$ and $+5.9$ points). By the safety condition, these answers were not safe. Accuracy alone hides this: 43--48\% of correct answers (24\% once names are disambiguated) do not survive nearby changes. Default luck is visible where theory says it should be. Lucky answers trended toward worse decisions, and models lowered their confidence only modestly when they failed nearby.
 
 \begin{table}[t]
 \centering\small
@@ -220,7 +220,7 @@ Each row gives the pre-registered rule (file \texttt{PREREGISTRATION.md}, sectio
 \toprule
 Question & Pre-registered rule; origin & What the data suggest & Change that would settle it \\
 \midrule
-Luck beyond noise & Net luck rate above $1-(1-e)^7$ (``Definitions: Noise floor''); our own formula & Inconclusive under this floor, but rewording failures are 4$\times$ the control per check (5$\times$ once names are disambiguated): likely signal & Pre-register a per-check floor for each test; more repeats to estimate serving noise; human audit of a sample of rewordings for meaning drift \\
+Luck beyond noise & Net luck rate above $1-(1-e)^7$ (``Definitions: Noise floor''); our own formula & Inconclusive under this floor, but rewording failures per check are 17.0\% vs.\ 4.0\% for the control (7.3\% vs.\ 1.4\% once names are disambiguated): likely signal & Pre-register a per-check floor for each test; more repeats to estimate serving noise; human audit of a sample of rewordings for meaning drift \\
 Default luck where expected & Fallback $>$ open luck rate; from theory & Overall difference not distinguishable; neighbour test alone shows it clearly & Pre-register the neighbour test as the positive control for default luck \\
 Fresh-fact control & $\geq$80\% of correct fresh answers flagged; judgment & 42\%: the tests miss pattern luck & \emph{Fake-barn} neighbours matched on name cues (same language, suffix, style) with a different truth; report detection rate per kind of luck \\
 H1 & Gap $\geq$10 points; judgment (stricter than Cohen's small, 7.6 points here) & $+6.4$ ($-0.8$ to 12.7): predicted direction, small, not yet distinguishable from zero & Decision tasks that \emph{need} the fact (reject a task if a model without the fact solves it); about twice the items for adequate power \\
