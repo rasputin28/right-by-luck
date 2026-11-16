@@ -28,6 +28,8 @@ A correct answer that fails either check is *right by luck*. The study was pre-r
 - Fresh-fact control (organisations founded after the models' cutoffs): the tests flag only 42% of correct answers as luck (pre-registered threshold 80%), so luck rates are lower bounds; pattern luck needs "fake-barn" neighbours.
 - H1 (lucky answers → worse decisions): 6.4 points, inconclusive. H2: inconclusive. H3 (confidence AUROC 0.67): inconclusive. H4: refuted; confidence drops 10.6 points on nearby failures.
 
+- Ambiguous names (post hoc): with each subject disambiguated by its Wikidata description, on the 153 items where the description does not reveal the answer, the luck rate falls from 44.7% to 24.3% (18.4–30.8), still well above noise. About half of the measured luck came from questions without a single true answer. See `code/disambig.py`, `results/disambig.json`.
+
 Full numbers: [`results/results.json`](results/results.json).
 
 ## Why a method, not a benchmark
@@ -51,6 +53,7 @@ python run_noconf.py     # robustness: same battery without the confidence reque
 python grade.py && python grade.py responses_noconf.jsonl graded_noconf.jsonl
 python analyze.py        # pre-registered + post-hoc analysis -> results/results.json
 python figs.py           # figures
+python disambig.py && python grade.py responses_disambig.jsonl graded_disambig.jsonl && python disambig_analyze.py   # post-hoc ambiguity check
 ```
 
 Every call is cached by a hash of its full request in `data/calls.jsonl`, so re-running the scripts reuses our exact responses. Delete that file to query the models again.
