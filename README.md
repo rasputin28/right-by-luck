@@ -6,7 +6,7 @@ Joel Suro Villalobos (AI Safety Mexico, [aismx.org](https://www.aismx.org/en/)) 
 
 AI × Epistemics Research Sprint (Apart Research), November 2026 · Track 1: Model Epistemics & Decision-Making Evals
 
-**Paper:** [`paper/paper.pdf`](paper/paper.pdf) · **Pre-registration:** [`PREREGISTRATION.md`](PREREGISTRATION.md) · **Design explainer** (written before the run; the paper's Appendix D lists what changed): [`explainer/explainer.pdf`](explainer/explainer.pdf)
+**Paper:** [`paper/paper.pdf`](paper/paper.pdf) · **Slides:** [`paper/slides.pdf`](paper/slides.pdf) · **Pre-registration:** [`PREREGISTRATION.md`](PREREGISTRATION.md) · **Design explainer** (written before the run; the paper's Appendix D lists what changed): [`explainer/explainer.pdf`](explainer/explainer.pdf)
 
 ## What this is
 
