@@ -1,0 +1,31 @@
+n,question,accepted_answers,model_answer,judge_says_correct,YOUR_VERDICT (yes/no)
+1,What is the religion of James Madison?,Episcopal Church; Gu fakes; Guerra universitaria; Episcopalianism; The Episcopal Church in the United States of America,Episcopalian,yes,Yes
+2,In what country is namestyles.net?,India,United States,no,No
+3,In what country is Nexoria Systems?,Germany; Deutschland,Canada,no,No
+4,In what country is QuelLLM?,France,United States,no,No 
+5,In what country is namestyles.net?,India,I don't have specific information on the location of namestyles.net.,no,No
+6,In what city was Eduardo Hurtado born?,"Esmeraldas; Esmeraldas (Ecuador); Esmeraldas, Ecuador; San Mateo de las Esmeraldas","Eduardo Hurtado was born in Mexico City, Mexico.",no,No
+7,In what country is Listar?,France,Listar is not a recognized location.,no,No
+8,In what country is Sibaritas Club?,Spain,Colombia,no,No
+9,What is Robert D. Cardona's occupation?,animator; animation artist; cartoonist; graphic artist,Robert D. Cardona is an American educator and politician who has served as the United States Assistant Secretary of Education for Elementary and Secondary Education.,no,No
+10,"In what city was Margaret, Countess of Pembroke born?",Windsor Castle,"Wotton, Buckinghamshire, England",no,No
+11,In what country is VIABUILD?,Australia,Sweden,no,No
+12,What is the religion of Kingdom of Sussex?,Anglo-Saxon paganism; Anglo-Saxon religion,Christianity,no,Yes
+13,What is Brigitte Bardot's occupation?,actor; actress; actors; actresses; model,Acting and animal rights activism,no,Yes
+14,What is Jörg A. Eggers's occupation?,film director; movie director; director; motion picture director; screenwriter,Jörg A. Eggers is known for his work in the field of computer science and software engineering.,no,No
+15,What is Per Risvik's occupation?,politician; political leader; political figure; polit.; pol,Per Risvik is a Norwegian chef and restaurateur,no,No
+16,What is Pierre Chatenet's occupation?,politician; political leader; political figure; polit.; pol,Winemaker,no,No
+17,In what city was Annie Oakley born?,"Darke County; Darke County, Ohio","Willow Creek, Ohio",no,Yes
+18,In what country is Bell?,United States of America; the United States of America; America; U.S.A.; USA,Canada,no,No
+19,What is the religion of Alexander I?,Catholic Church; Roman Catholic Church; Church; Roman Apostolic Catholic Church,Eastern Orthodox Christianity,no,Yes
+20,In what country is Honorfy?,Brazil,Spain,no,No
+21,Who was the director of The Soldier?,James Glickenhaus,Paul W.S. Anderson,no,No
+22,What is the religion of Assumption of Mary?,Anglican Communion; Eastern Orthodox Church; Eastern Church; Orthodox Church; Orthodox Catholic Church,Christianity,no,Yes
+23,Who is the author of Wicked?,Winnie Holzman,Gregory Maguire,no,No
+24,What is the religion of First Bulgarian Empire?,Tengrism; Tengriism; Tengrianism; Tenggerism,"The primary religion of the First Bulgarian Empire was initially paganism, but it later adopted Eastern Orthodox Christianity.",no,No
+25,What is the religion of Honorius III?,Christianity; Christian faith,Catholicism,yes,Yes
+26,What is the religion of James Madison?,Episcopal Church; Gu fakes; Guerra universitaria; Episcopalianism; The Episcopal Church in the United States of America,Anglican,yes,Yes
+27,In what country is GAJEST?,Japan,I cannot determine the country of GAJEST as it is not a recognized or commonly known location or organization.,no,No
+28,In what country is Axofy?,India,Norway,no,No
+29,In what city was Steve Kerr born?,Beirut,"Berkeley, California",no,No
+30,What is the religion of Padre Pio?,Catholic Church; Roman Catholic Church; Church; Roman Apostolic Catholic Church,Catholicism,no,Yes
