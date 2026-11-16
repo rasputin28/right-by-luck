@@ -64,16 +64,17 @@ def P(t, italic=False, size=None, bold_lead=None):
         if size: r.font.size = Pt(size)
     return p
 def FIG(path, caption, width=5.8):
-    d.add_picture(str(path), width=Inches(width)); d.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER
+    d.add_picture(str(path), width=Inches(width)); d.paragraphs[-1].alignment = WD_ALIGN_PARAGRAPH.CENTER; d.paragraphs[-1].paragraph_format.keep_with_next = True
     P(caption, size=9).alignment = WD_ALIGN_PARAGRAPH.LEFT
 def TABLE(rows, caption, widths=None, size=8.5):
-    P(caption, size=9)
+    cap = P(caption, size=9); cap.paragraph_format.keep_with_next = True
     t = d.add_table(rows=len(rows), cols=len(rows[0]))
     t.style = d.styles["Table Grid"] if "Table Grid" in [s.name for s in d.styles] else t.style
     for i, row in enumerate(rows):
         for j, val in enumerate(row):
             c = t.cell(i, j); c.text = ""
             r = c.paragraphs[0].add_run(val); r.font.size = Pt(size); r.bold = (i == 0)
+            c.paragraphs[0].paragraph_format.keep_with_next = (i < len(rows) - 1)
             if widths: c.width = Inches(widths[j])
     d.add_paragraph()
 
