@@ -3,7 +3,7 @@ import asyncio, json, random, re
 from orclient import Client, ROOT
 from build import jparse, GEN
 
-SRC = ROOT.parents[1] / "datasets/fresh_facts/r.json"
+SRC = ROOT / "data/sources/wikidata_orgs_2026.json"
 ALIASES = {"United States": ["United States", "United States of America", "USA", "US", "U.S.", "America"],
            "United Kingdom": ["United Kingdom", "UK", "U.K.", "Britain", "Great Britain", "England", "Scotland", "Wales", "Northern Ireland"],
            "Germany": ["Germany", "Deutschland"], "Netherlands": ["Netherlands", "Holland"],

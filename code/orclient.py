@@ -20,7 +20,8 @@ TESTED = list(PROVIDERS)[:3]
 def _key():
     k = os.environ.get("OPENROUTER_API_KEY")
     if not k:
-        for line in (ROOT.parents[1] / ".env").read_text().splitlines():
+        envf = next((p for p in (ROOT / ".env", ROOT.parents[1] / ".env") if p.exists()), None)
+        for line in (envf.read_text().splitlines() if envf else []):
             if line.startswith("OPENROUTER_API_KEY="):
                 k = line.split("=", 1)[1].strip()
     return k

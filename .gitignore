@@ -1,0 +1,5 @@
+.env
+data/sources/*.parquet
+__pycache__/
+explainer/*backup*.tex
+explainer/*.log

@@ -1,0 +1,5 @@
+SELECT ?item ?itemLabel ?countryLabel ?inception WHERE {
+  ?item wdt:P571 ?inception; wdt:P17 ?country.
+  FILTER(?inception >= "2026-03-01"^^xsd:dateTime)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+} LIMIT 2000

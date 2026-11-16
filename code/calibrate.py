@@ -10,7 +10,7 @@ NEUTRAL = ("Answer the question with a short answer, then give your confidence f
 
 
 def load():
-    d = pd.read_parquet(ROOT.parents[1] / "datasets/popqa/0000.parquet")
+    d = pd.read_parquet(ROOT / "data/sources/popqa_test.parquet")
     d["ans"] = d["possible_answers"].apply(json.loads)
     d["leak"] = [any(isinstance(a, str) and len(a) > 3 and a.lower() in str(s).lower() for a in A) for s, A in zip(d.subj, d.ans)]
     d = d[~d.leak & d.prop.isin(FALLBACK + OPEN)].copy()
