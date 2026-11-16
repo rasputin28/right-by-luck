@@ -1,0 +1,865 @@
+id,model,prop,group,popbin,correct
+546212,meta-llama/llama-3.3-70b-instruct,author,open,4,True
+3369181,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,False
+5380272,meta-llama/llama-3.3-70b-instruct,composer,open,5,False
+3509681,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+325021,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,False
+6210701,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,False
+4218380,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,False
+2627969,meta-llama/llama-3.3-70b-instruct,composer,open,5,True
+2627969,openai/gpt-4o-mini-2024-07-18,composer,open,5,True
+325021,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,False
+5380272,qwen/qwen-2.5-72b-instruct,composer,open,5,False
+546212,openai/gpt-4o-mini-2024-07-18,author,open,4,True
+6210701,qwen/qwen-2.5-72b-instruct,sport,fallback,5,False
+3509681,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+5380272,openai/gpt-4o-mini-2024-07-18,composer,open,5,False
+3369181,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,False
+6384236,meta-llama/llama-3.3-70b-instruct,composer,open,5,True
+6210701,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,False
+3509681,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+4218380,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,False
+6129487,meta-llama/llama-3.3-70b-instruct,country,fallback,3,False
+4551508,meta-llama/llama-3.3-70b-instruct,author,open,4,False
+5198991,meta-llama/llama-3.3-70b-instruct,director,open,4,False
+5198991,openai/gpt-4o-mini-2024-07-18,director,open,4,True
+2766419,meta-llama/llama-3.3-70b-instruct,author,open,3,True
+1410521,meta-llama/llama-3.3-70b-instruct,director,open,3,False
+325021,qwen/qwen-2.5-72b-instruct,place of birth,open,3,False
+3369181,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,False
+4218380,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+546212,qwen/qwen-2.5-72b-instruct,author,open,4,True
+6129487,openai/gpt-4o-mini-2024-07-18,country,fallback,3,True
+6384236,openai/gpt-4o-mini-2024-07-18,composer,open,5,False
+4551508,openai/gpt-4o-mini-2024-07-18,author,open,4,False
+2636385,meta-llama/llama-3.3-70b-instruct,director,open,5,True
+6129487,qwen/qwen-2.5-72b-instruct,country,fallback,3,False
+206780,meta-llama/llama-3.3-70b-instruct,director,open,5,True
+2627969,qwen/qwen-2.5-72b-instruct,composer,open,5,False
+2766419,openai/gpt-4o-mini-2024-07-18,author,open,3,False
+1410521,qwen/qwen-2.5-72b-instruct,director,open,3,False
+2636385,openai/gpt-4o-mini-2024-07-18,director,open,5,True
+1410521,openai/gpt-4o-mini-2024-07-18,director,open,3,False
+184388,meta-llama/llama-3.3-70b-instruct,director,open,5,False
+2869541,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,True
+5198991,qwen/qwen-2.5-72b-instruct,director,open,4,False
+6384236,qwen/qwen-2.5-72b-instruct,composer,open,5,False
+724210,meta-llama/llama-3.3-70b-instruct,author,open,3,True
+2636385,qwen/qwen-2.5-72b-instruct,director,open,5,False
+206780,openai/gpt-4o-mini-2024-07-18,director,open,5,True
+184388,qwen/qwen-2.5-72b-instruct,director,open,5,False
+206780,qwen/qwen-2.5-72b-instruct,director,open,5,True
+2869541,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,True
+4551508,qwen/qwen-2.5-72b-instruct,author,open,4,False
+5262087,meta-llama/llama-3.3-70b-instruct,director,open,5,True
+221318,meta-llama/llama-3.3-70b-instruct,composer,open,5,True
+2869541,qwen/qwen-2.5-72b-instruct,sport,fallback,2,True
+184388,openai/gpt-4o-mini-2024-07-18,director,open,5,False
+2766419,qwen/qwen-2.5-72b-instruct,author,open,3,False
+5262087,qwen/qwen-2.5-72b-instruct,director,open,5,True
+724210,openai/gpt-4o-mini-2024-07-18,author,open,3,True
+2400001,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,False
+5262087,openai/gpt-4o-mini-2024-07-18,director,open,5,True
+1352506,meta-llama/llama-3.3-70b-instruct,author,open,2,True
+2400001,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,False
+724210,qwen/qwen-2.5-72b-instruct,author,open,3,True
+5965590,meta-llama/llama-3.3-70b-instruct,author,open,3,True
+221318,openai/gpt-4o-mini-2024-07-18,composer,open,5,True
+5703447,meta-llama/llama-3.3-70b-instruct,composer,open,1,False
+221318,qwen/qwen-2.5-72b-instruct,composer,open,5,True
+5817172,meta-llama/llama-3.3-70b-instruct,composer,open,5,True
+1352506,qwen/qwen-2.5-72b-instruct,author,open,2,True
+3119715,openai/gpt-4o-mini-2024-07-18,author,open,4,False
+1352506,openai/gpt-4o-mini-2024-07-18,author,open,2,True
+5703447,openai/gpt-4o-mini-2024-07-18,composer,open,1,False
+5703447,qwen/qwen-2.5-72b-instruct,composer,open,1,False
+428077,meta-llama/llama-3.3-70b-instruct,country,fallback,0,True
+5817172,qwen/qwen-2.5-72b-instruct,composer,open,5,False
+2626072,meta-llama/llama-3.3-70b-instruct,director,open,3,True
+634598,meta-llama/llama-3.3-70b-instruct,director,open,4,True
+420208,meta-llama/llama-3.3-70b-instruct,country,fallback,0,True
+2400001,qwen/qwen-2.5-72b-instruct,religion,fallback,1,False
+1533806,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,True
+5965590,openai/gpt-4o-mini-2024-07-18,author,open,3,False
+428077,qwen/qwen-2.5-72b-instruct,country,fallback,0,True
+3119715,meta-llama/llama-3.3-70b-instruct,author,open,4,False
+634598,qwen/qwen-2.5-72b-instruct,director,open,4,True
+634598,openai/gpt-4o-mini-2024-07-18,director,open,4,True
+5965590,qwen/qwen-2.5-72b-instruct,author,open,3,False
+1442209,meta-llama/llama-3.3-70b-instruct,author,open,5,False
+2626072,openai/gpt-4o-mini-2024-07-18,director,open,3,True
+5817172,openai/gpt-4o-mini-2024-07-18,composer,open,5,True
+4487410,meta-llama/llama-3.3-70b-instruct,composer,open,5,True
+428077,openai/gpt-4o-mini-2024-07-18,country,fallback,0,True
+1000828,meta-llama/llama-3.3-70b-instruct,author,open,3,False
+1533806,qwen/qwen-2.5-72b-instruct,sport,fallback,5,True
+4487410,qwen/qwen-2.5-72b-instruct,composer,open,5,True
+420208,qwen/qwen-2.5-72b-instruct,country,fallback,0,True
+1533806,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,True
+420208,openai/gpt-4o-mini-2024-07-18,country,fallback,0,True
+1442209,openai/gpt-4o-mini-2024-07-18,author,open,5,False
+3119715,qwen/qwen-2.5-72b-instruct,author,open,4,True
+4487410,openai/gpt-4o-mini-2024-07-18,composer,open,5,True
+2626072,qwen/qwen-2.5-72b-instruct,director,open,3,False
+1000828,openai/gpt-4o-mini-2024-07-18,author,open,3,False
+1000828,qwen/qwen-2.5-72b-instruct,author,open,3,False
+607922,openai/gpt-4o-mini-2024-07-18,director,open,4,False
+1765512,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+5264183,openai/gpt-4o-mini-2024-07-18,country,fallback,0,False
+204543,openai/gpt-4o-mini-2024-07-18,composer,open,4,False
+607922,meta-llama/llama-3.3-70b-instruct,director,open,4,False
+2587839,meta-llama/llama-3.3-70b-instruct,author,open,2,False
+5264183,meta-llama/llama-3.3-70b-instruct,country,fallback,0,False
+1765512,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+1765512,qwen/qwen-2.5-72b-instruct,country,fallback,2,True
+3782652,openai/gpt-4o-mini-2024-07-18,author,open,2,False
+3417474,meta-llama/llama-3.3-70b-instruct,author,open,5,True
+5264183,qwen/qwen-2.5-72b-instruct,country,fallback,0,False
+3782652,meta-llama/llama-3.3-70b-instruct,author,open,2,False
+204543,meta-llama/llama-3.3-70b-instruct,composer,open,4,True
+1971693,meta-llama/llama-3.3-70b-instruct,director,open,4,True
+3417474,openai/gpt-4o-mini-2024-07-18,author,open,5,False
+1442209,qwen/qwen-2.5-72b-instruct,author,open,5,False
+4890334,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,False
+607922,qwen/qwen-2.5-72b-instruct,director,open,4,False
+2587839,openai/gpt-4o-mini-2024-07-18,author,open,2,False
+3417474,qwen/qwen-2.5-72b-instruct,author,open,5,False
+1971693,openai/gpt-4o-mini-2024-07-18,director,open,4,True
+2587839,qwen/qwen-2.5-72b-instruct,author,open,2,False
+1108230,meta-llama/llama-3.3-70b-instruct,composer,open,0,False
+5777556,meta-llama/llama-3.3-70b-instruct,author,open,0,False
+2922938,meta-llama/llama-3.3-70b-instruct,director,open,3,True
+3317672,meta-llama/llama-3.3-70b-instruct,author,open,2,False
+4890334,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,False
+2697856,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,True
+204543,qwen/qwen-2.5-72b-instruct,composer,open,4,False
+2922938,openai/gpt-4o-mini-2024-07-18,director,open,3,False
+1108230,openai/gpt-4o-mini-2024-07-18,composer,open,0,False
+3317672,openai/gpt-4o-mini-2024-07-18,author,open,2,False
+3782652,qwen/qwen-2.5-72b-instruct,author,open,2,False
+2922938,qwen/qwen-2.5-72b-instruct,director,open,3,False
+3317672,qwen/qwen-2.5-72b-instruct,author,open,2,False
+5777556,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+329808,meta-llama/llama-3.3-70b-instruct,director,open,4,True
+5777556,qwen/qwen-2.5-72b-instruct,author,open,0,False
+2725707,meta-llama/llama-3.3-70b-instruct,director,open,5,True
+2697856,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,True
+1262267,openai/gpt-4o-mini-2024-07-18,author,open,4,False
+2697856,qwen/qwen-2.5-72b-instruct,sport,fallback,1,False
+1262267,meta-llama/llama-3.3-70b-instruct,author,open,4,False
+4890334,qwen/qwen-2.5-72b-instruct,religion,fallback,5,False
+3076671,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,False
+2235290,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+1614550,meta-llama/llama-3.3-70b-instruct,composer,open,0,False
+1971693,qwen/qwen-2.5-72b-instruct,director,open,4,False
+329808,openai/gpt-4o-mini-2024-07-18,director,open,4,True
+3926414,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+2235290,qwen/qwen-2.5-72b-instruct,country,fallback,2,True
+1108230,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+3076671,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,True
+2725707,qwen/qwen-2.5-72b-instruct,director,open,5,True
+1262267,qwen/qwen-2.5-72b-instruct,author,open,4,False
+329808,qwen/qwen-2.5-72b-instruct,director,open,4,True
+3076671,qwen/qwen-2.5-72b-instruct,sport,fallback,2,True
+3613977,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,False
+2235290,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+3926414,openai/gpt-4o-mini-2024-07-18,composer,open,2,True
+658820,meta-llama/llama-3.3-70b-instruct,director,open,1,False
+1614550,openai/gpt-4o-mini-2024-07-18,composer,open,0,False
+3422866,meta-llama/llama-3.3-70b-instruct,country,fallback,0,True
+2055647,meta-llama/llama-3.3-70b-instruct,director,open,5,True
+3613977,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,False
+3422866,qwen/qwen-2.5-72b-instruct,country,fallback,0,True
+3613977,qwen/qwen-2.5-72b-instruct,place of birth,open,1,False
+205432,meta-llama/llama-3.3-70b-instruct,director,open,4,False
+3926414,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+658820,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+658820,qwen/qwen-2.5-72b-instruct,director,open,1,False
+6306328,qwen/qwen-2.5-72b-instruct,author,open,5,True
+2725707,openai/gpt-4o-mini-2024-07-18,director,open,5,True
+2055647,openai/gpt-4o-mini-2024-07-18,director,open,5,True
+6306328,meta-llama/llama-3.3-70b-instruct,author,open,5,True
+4296607,meta-llama/llama-3.3-70b-instruct,director,open,3,True
+3014897,meta-llama/llama-3.3-70b-instruct,director,open,2,False
+1614550,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+6306328,openai/gpt-4o-mini-2024-07-18,author,open,5,True
+3422866,openai/gpt-4o-mini-2024-07-18,country,fallback,0,True
+2055647,qwen/qwen-2.5-72b-instruct,director,open,5,True
+4296607,qwen/qwen-2.5-72b-instruct,director,open,3,False
+3014897,qwen/qwen-2.5-72b-instruct,director,open,2,False
+5950093,meta-llama/llama-3.3-70b-instruct,director,open,2,False
+4977081,meta-llama/llama-3.3-70b-instruct,country,fallback,0,True
+3014897,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+5347073,meta-llama/llama-3.3-70b-instruct,author,open,0,False
+257764,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,False
+4296607,openai/gpt-4o-mini-2024-07-18,director,open,3,False
+4977081,openai/gpt-4o-mini-2024-07-18,country,fallback,0,True
+4249573,meta-llama/llama-3.3-70b-instruct,director,open,1,False
+4977081,qwen/qwen-2.5-72b-instruct,country,fallback,0,True
+1123364,qwen/qwen-2.5-72b-instruct,author,open,2,False
+257764,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,True
+1123364,meta-llama/llama-3.3-70b-instruct,author,open,2,False
+1123364,openai/gpt-4o-mini-2024-07-18,author,open,2,False
+257764,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,True
+5950093,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+205432,qwen/qwen-2.5-72b-instruct,director,open,4,False
+4249573,qwen/qwen-2.5-72b-instruct,director,open,1,False
+6253618,meta-llama/llama-3.3-70b-instruct,author,open,5,False
+1593358,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,True
+6253618,openai/gpt-4o-mini-2024-07-18,author,open,5,False
+3738056,meta-llama/llama-3.3-70b-instruct,country,fallback,3,True
+1956088,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+5347073,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+5202660,meta-llama/llama-3.3-70b-instruct,director,open,2,False
+5950093,qwen/qwen-2.5-72b-instruct,director,open,2,False
+5202660,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+4249573,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+1593358,qwen/qwen-2.5-72b-instruct,sport,fallback,5,True
+1593358,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,True
+3738056,qwen/qwen-2.5-72b-instruct,country,fallback,3,True
+1956088,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+205432,openai/gpt-4o-mini-2024-07-18,director,open,4,False
+1956088,qwen/qwen-2.5-72b-instruct,country,fallback,2,True
+5347073,qwen/qwen-2.5-72b-instruct,author,open,0,False
+3738056,openai/gpt-4o-mini-2024-07-18,country,fallback,3,True
+5948582,meta-llama/llama-3.3-70b-instruct,author,open,4,True
+2366583,meta-llama/llama-3.3-70b-instruct,director,open,3,False
+6253618,qwen/qwen-2.5-72b-instruct,author,open,5,False
+4411817,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,False
+2667458,meta-llama/llama-3.3-70b-instruct,director,open,1,False
+5948582,qwen/qwen-2.5-72b-instruct,author,open,4,True
+925304,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,False
+5202660,qwen/qwen-2.5-72b-instruct,director,open,2,False
+2667458,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+2366583,qwen/qwen-2.5-72b-instruct,director,open,3,False
+5948582,openai/gpt-4o-mini-2024-07-18,author,open,4,True
+3403435,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,True
+4411817,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,False
+3403435,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,True
+925304,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,False
+3403435,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,True
+2043035,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+2667458,qwen/qwen-2.5-72b-instruct,director,open,1,False
+2366583,openai/gpt-4o-mini-2024-07-18,director,open,3,False
+925304,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+204048,meta-llama/llama-3.3-70b-instruct,author,open,5,True
+654148,meta-llama/llama-3.3-70b-instruct,country,fallback,3,True
+4411817,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,False
+5951238,meta-llama/llama-3.3-70b-instruct,author,open,3,True
+5792266,meta-llama/llama-3.3-70b-instruct,author,open,2,True
+2043035,qwen/qwen-2.5-72b-instruct,director,open,0,False
+654148,openai/gpt-4o-mini-2024-07-18,country,fallback,3,True
+6113335,meta-llama/llama-3.3-70b-instruct,author,open,0,False
+2043035,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+5792266,openai/gpt-4o-mini-2024-07-18,author,open,2,True
+654148,qwen/qwen-2.5-72b-instruct,country,fallback,3,True
+204048,openai/gpt-4o-mini-2024-07-18,author,open,5,True
+5951238,qwen/qwen-2.5-72b-instruct,author,open,3,True
+1627122,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,False
+2467847,meta-llama/llama-3.3-70b-instruct,composer,open,4,True
+6113335,qwen/qwen-2.5-72b-instruct,author,open,0,False
+204048,qwen/qwen-2.5-72b-instruct,author,open,5,True
+2467847,openai/gpt-4o-mini-2024-07-18,composer,open,4,True
+5951238,openai/gpt-4o-mini-2024-07-18,author,open,3,True
+6113335,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+2467847,qwen/qwen-2.5-72b-instruct,composer,open,4,True
+3146871,meta-llama/llama-3.3-70b-instruct,country,fallback,5,True
+1044970,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,True
+5792266,qwen/qwen-2.5-72b-instruct,author,open,2,False
+1044970,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,True
+1627122,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,False
+3146871,openai/gpt-4o-mini-2024-07-18,country,fallback,5,True
+5025079,meta-llama/llama-3.3-70b-instruct,director,open,1,False
+789817,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+1887734,meta-llama/llama-3.3-70b-instruct,country,fallback,4,True
+1044970,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,False
+789817,qwen/qwen-2.5-72b-instruct,country,fallback,2,False
+1627122,qwen/qwen-2.5-72b-instruct,religion,fallback,3,False
+31525,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+789817,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+5812793,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+5812793,meta-llama/llama-3.3-70b-instruct,author,open,0,False
+1887734,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+1887734,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+2758402,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,True
+5025079,qwen/qwen-2.5-72b-instruct,director,open,1,False
+5025079,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+31525,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+5962867,qwen/qwen-2.5-72b-instruct,author,open,0,False
+1601571,meta-llama/llama-3.3-70b-instruct,director,open,2,False
+5915209,meta-llama/llama-3.3-70b-instruct,director,open,1,False
+6321183,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+5962867,meta-llama/llama-3.3-70b-instruct,author,open,0,True
+31525,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+2758402,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,False
+2758402,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,False
+5915209,qwen/qwen-2.5-72b-instruct,director,open,1,False
+1601571,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+6423457,meta-llama/llama-3.3-70b-instruct,country,fallback,5,False
+5962867,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+6321183,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+5915209,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+6321183,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+3120232,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+1519072,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,True
+3120232,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+3772137,openai/gpt-4o-mini-2024-07-18,author,open,1,True
+6423457,openai/gpt-4o-mini-2024-07-18,country,fallback,5,False
+6423457,qwen/qwen-2.5-72b-instruct,country,fallback,5,False
+3990933,meta-llama/llama-3.3-70b-instruct,country,fallback,0,True
+3324967,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,False
+3772137,meta-llama/llama-3.3-70b-instruct,author,open,1,False
+1601571,qwen/qwen-2.5-72b-instruct,director,open,2,False
+5812793,qwen/qwen-2.5-72b-instruct,author,open,0,False
+3772137,qwen/qwen-2.5-72b-instruct,author,open,1,False
+1519072,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,False
+3990933,openai/gpt-4o-mini-2024-07-18,country,fallback,0,True
+4076538,meta-llama/llama-3.3-70b-instruct,composer,open,4,False
+3324967,qwen/qwen-2.5-72b-instruct,place of birth,open,0,False
+1519072,qwen/qwen-2.5-72b-instruct,sport,fallback,0,True
+2490295,meta-llama/llama-3.3-70b-instruct,director,open,2,True
+3990933,qwen/qwen-2.5-72b-instruct,country,fallback,0,True
+3324967,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+3146871,qwen/qwen-2.5-72b-instruct,country,fallback,5,True
+6078954,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+3120232,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+2915101,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,True
+4076538,qwen/qwen-2.5-72b-instruct,composer,open,4,False
+2915101,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,True
+2490295,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+4076538,openai/gpt-4o-mini-2024-07-18,composer,open,4,False
+5919386,meta-llama/llama-3.3-70b-instruct,director,open,2,True
+1985979,meta-llama/llama-3.3-70b-instruct,composer,open,0,False
+5756003,meta-llama/llama-3.3-70b-instruct,director,open,3,True
+6515003,qwen/qwen-2.5-72b-instruct,place of birth,open,2,True
+6515003,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,True
+2490295,qwen/qwen-2.5-72b-instruct,director,open,2,False
+5756003,openai/gpt-4o-mini-2024-07-18,director,open,3,False
+5919386,openai/gpt-4o-mini-2024-07-18,director,open,2,False
+6078954,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+1112731,meta-llama/llama-3.3-70b-instruct,author,open,0,True
+6515003,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,True
+5756003,qwen/qwen-2.5-72b-instruct,director,open,3,False
+6078954,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+5464187,meta-llama/llama-3.3-70b-instruct,author,open,1,True
+2915101,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,False
+1112731,openai/gpt-4o-mini-2024-07-18,author,open,0,False
+2478495,qwen/qwen-2.5-72b-instruct,place of birth,open,1,True
+2478495,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,True
+5424079,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,False
+2320443,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,False
+3627834,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,False
+5424079,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,False
+1112731,qwen/qwen-2.5-72b-instruct,author,open,0,False
+5464187,qwen/qwen-2.5-72b-instruct,author,open,1,False
+2478495,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,True
+2320443,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+3627834,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,False
+2320443,qwen/qwen-2.5-72b-instruct,place of birth,open,0,False
+5919386,qwen/qwen-2.5-72b-instruct,director,open,2,False
+2276352,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,False
+5464187,openai/gpt-4o-mini-2024-07-18,author,open,1,True
+1076870,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,True
+5424079,qwen/qwen-2.5-72b-instruct,place of birth,open,1,False
+1076870,qwen/qwen-2.5-72b-instruct,place of birth,open,0,False
+1985979,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+1985979,openai/gpt-4o-mini-2024-07-18,composer,open,0,False
+1076870,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+3865555,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,False
+4303593,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,True
+5022237,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,False
+3975295,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,True
+5920612,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+5022237,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,True
+3975295,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,True
+3865555,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,False
+5920612,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+1138967,meta-llama/llama-3.3-70b-instruct,author,open,4,False
+2276352,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+6339290,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,False
+3975295,qwen/qwen-2.5-72b-instruct,sport,fallback,5,True
+5022237,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+707144,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+2276352,qwen/qwen-2.5-72b-instruct,place of birth,open,0,False
+4303593,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,True
+5920612,qwen/qwen-2.5-72b-instruct,director,open,0,False
+4303593,qwen/qwen-2.5-72b-instruct,sport,fallback,0,True
+4106028,meta-llama/llama-3.3-70b-instruct,author,open,3,True
+707144,qwen/qwen-2.5-72b-instruct,country,fallback,2,True
+3627834,qwen/qwen-2.5-72b-instruct,sport,fallback,1,False
+6339290,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,False
+1138967,openai/gpt-4o-mini-2024-07-18,author,open,4,False
+6339290,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,True
+4106028,openai/gpt-4o-mini-2024-07-18,author,open,3,False
+922670,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,True
+6482750,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,False
+5694087,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,False
+1376164,meta-llama/llama-3.3-70b-instruct,country,fallback,1,True
+707144,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+1138967,qwen/qwen-2.5-72b-instruct,author,open,4,False
+2929949,meta-llama/llama-3.3-70b-instruct,author,open,1,False
+3865555,qwen/qwen-2.5-72b-instruct,place of birth,open,1,False
+4780493,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,True
+5694087,qwen/qwen-2.5-72b-instruct,sport,fallback,2,True
+2929949,openai/gpt-4o-mini-2024-07-18,author,open,1,False
+6482750,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,False
+1376164,openai/gpt-4o-mini-2024-07-18,country,fallback,1,True
+922670,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,True
+2245900,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,True
+4780493,qwen/qwen-2.5-72b-instruct,place of birth,open,3,True
+4780493,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,True
+2440722,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,True
+4106028,qwen/qwen-2.5-72b-instruct,author,open,3,True
+2440722,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,True
+6482750,qwen/qwen-2.5-72b-instruct,sport,fallback,4,False
+1376164,qwen/qwen-2.5-72b-instruct,country,fallback,1,False
+922670,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,True
+2929949,qwen/qwen-2.5-72b-instruct,author,open,1,False
+5131889,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,True
+5694087,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,True
+2533751,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+1208048,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,True
+5751107,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,False
+876881,meta-llama/llama-3.3-70b-instruct,author,open,1,False
+2533751,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+5131889,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,True
+508249,qwen/qwen-2.5-72b-instruct,country,fallback,5,True
+395344,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,True
+1208048,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,True
+1287272,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,False
+1287272,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,False
+2533751,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+6152945,meta-llama/llama-3.3-70b-instruct,director,open,1,True
+508249,meta-llama/llama-3.3-70b-instruct,country,fallback,5,True
+2245900,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,True
+5751107,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,False
+876881,openai/gpt-4o-mini-2024-07-18,author,open,1,False
+395344,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,True
+508249,openai/gpt-4o-mini-2024-07-18,country,fallback,5,True
+2245900,qwen/qwen-2.5-72b-instruct,place of birth,open,4,False
+6449002,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,True
+5751107,qwen/qwen-2.5-72b-instruct,place of birth,open,2,False
+4520346,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,False
+2876696,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,True
+5131889,qwen/qwen-2.5-72b-instruct,sport,fallback,0,False
+6152945,openai/gpt-4o-mini-2024-07-18,director,open,1,False
+6449002,qwen/qwen-2.5-72b-instruct,place of birth,open,0,True
+6449002,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+4535105,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+4232627,meta-llama/llama-3.3-70b-instruct,sport,fallback,0,False
+4535105,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+4535105,openai/gpt-4o-mini-2024-07-18,composer,open,2,False
+1287272,qwen/qwen-2.5-72b-instruct,place of birth,open,2,False
+4520346,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,True
+3917655,meta-llama/llama-3.3-70b-instruct,place of birth,open,0,False
+2440722,qwen/qwen-2.5-72b-instruct,religion,fallback,5,True
+1208048,qwen/qwen-2.5-72b-instruct,sport,fallback,2,True
+3954287,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,True
+2876696,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,True
+4520346,qwen/qwen-2.5-72b-instruct,sport,fallback,0,True
+3917655,qwen/qwen-2.5-72b-instruct,place of birth,open,0,False
+3917655,openai/gpt-4o-mini-2024-07-18,place of birth,open,0,False
+3276958,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,False
+395344,qwen/qwen-2.5-72b-instruct,place of birth,open,2,True
+876881,qwen/qwen-2.5-72b-instruct,author,open,1,False
+4232627,openai/gpt-4o-mini-2024-07-18,sport,fallback,0,True
+564454,meta-llama/llama-3.3-70b-instruct,composer,open,3,False
+3264049,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,False
+3954287,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,False
+3276958,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,False
+2789233,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,False
+3126179,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,False
+3264049,qwen/qwen-2.5-72b-instruct,place of birth,open,1,False
+564454,openai/gpt-4o-mini-2024-07-18,composer,open,3,False
+6152945,qwen/qwen-2.5-72b-instruct,director,open,1,False
+3264049,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,False
+3954287,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+3276958,qwen/qwen-2.5-72b-instruct,religion,fallback,1,False
+564454,qwen/qwen-2.5-72b-instruct,composer,open,3,False
+2789233,qwen/qwen-2.5-72b-instruct,sport,fallback,1,False
+2789233,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,False
+2876696,qwen/qwen-2.5-72b-instruct,sport,fallback,0,True
+3126179,qwen/qwen-2.5-72b-instruct,religion,fallback,3,False
+66705,qwen/qwen-2.5-72b-instruct,composer,open,4,False
+221856,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,True
+4232627,qwen/qwen-2.5-72b-instruct,sport,fallback,0,True
+66705,meta-llama/llama-3.3-70b-instruct,composer,open,4,False
+444026,meta-llama/llama-3.3-70b-instruct,country,fallback,5,True
+1895354,meta-llama/llama-3.3-70b-instruct,country,fallback,3,False
+3126179,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,False
+1158868,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,True
+221856,qwen/qwen-2.5-72b-instruct,sport,fallback,5,True
+444026,qwen/qwen-2.5-72b-instruct,country,fallback,5,True
+2346730,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,True
+66705,openai/gpt-4o-mini-2024-07-18,composer,open,4,False
+1143958,meta-llama/llama-3.3-70b-instruct,country,fallback,2,True
+221856,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,True
+1683421,meta-llama/llama-3.3-70b-instruct,author,open,5,False
+1306567,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,False
+2346730,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,True
+1158868,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+1683421,qwen/qwen-2.5-72b-instruct,author,open,5,False
+1158868,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,False
+1683421,openai/gpt-4o-mini-2024-07-18,author,open,5,False
+3705637,meta-llama/llama-3.3-70b-instruct,country,fallback,1,False
+1143958,qwen/qwen-2.5-72b-instruct,country,fallback,2,True
+4263382,meta-llama/llama-3.3-70b-instruct,author,open,1,False
+1143958,openai/gpt-4o-mini-2024-07-18,country,fallback,2,True
+3705637,qwen/qwen-2.5-72b-instruct,country,fallback,1,False
+1895354,qwen/qwen-2.5-72b-instruct,country,fallback,3,False
+4657020,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,True
+1895354,openai/gpt-4o-mini-2024-07-18,country,fallback,3,False
+1404597,meta-llama/llama-3.3-70b-instruct,country,fallback,5,True
+4263382,openai/gpt-4o-mini-2024-07-18,author,open,1,False
+444026,openai/gpt-4o-mini-2024-07-18,country,fallback,5,True
+3705637,openai/gpt-4o-mini-2024-07-18,country,fallback,1,False
+2941094,meta-llama/llama-3.3-70b-instruct,author,open,1,False
+4657020,qwen/qwen-2.5-72b-instruct,place of birth,open,4,False
+1306567,qwen/qwen-2.5-72b-instruct,religion,fallback,4,False
+4657020,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,False
+3093191,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+2009603,openai/gpt-4o-mini-2024-07-18,place of birth,open,2,True
+1306567,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,True
+4263382,qwen/qwen-2.5-72b-instruct,author,open,1,False
+1404597,openai/gpt-4o-mini-2024-07-18,country,fallback,5,True
+2346730,qwen/qwen-2.5-72b-instruct,place of birth,open,2,False
+1404597,qwen/qwen-2.5-72b-instruct,country,fallback,5,True
+2009603,meta-llama/llama-3.3-70b-instruct,place of birth,open,2,True
+1945019,meta-llama/llama-3.3-70b-instruct,composer,open,4,False
+2941094,qwen/qwen-2.5-72b-instruct,author,open,1,False
+3093191,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+3367439,meta-llama/llama-3.3-70b-instruct,country,fallback,5,True
+6214547,openai/gpt-4o-mini-2024-07-18,country,fallback,1,True
+3116649,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+6214547,meta-llama/llama-3.3-70b-instruct,country,fallback,1,True
+2941094,openai/gpt-4o-mini-2024-07-18,author,open,1,False
+2009603,qwen/qwen-2.5-72b-instruct,place of birth,open,2,True
+3116649,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+5635249,meta-llama/llama-3.3-70b-instruct,composer,open,4,False
+3705361,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,True
+1069546,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,False
+3705361,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,True
+5635249,openai/gpt-4o-mini-2024-07-18,composer,open,4,False
+3367439,openai/gpt-4o-mini-2024-07-18,country,fallback,5,True
+3367439,qwen/qwen-2.5-72b-instruct,country,fallback,5,False
+5939352,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+1945019,openai/gpt-4o-mini-2024-07-18,composer,open,4,False
+3116649,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+1069546,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,True
+801964,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+3093191,qwen/qwen-2.5-72b-instruct,religion,fallback,0,False
+2654950,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+3705361,qwen/qwen-2.5-72b-instruct,religion,fallback,3,True
+5939352,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+1945019,qwen/qwen-2.5-72b-instruct,composer,open,4,False
+1821506,meta-llama/llama-3.3-70b-instruct,country,fallback,1,True
+801964,qwen/qwen-2.5-72b-instruct,director,open,0,False
+6447500,meta-llama/llama-3.3-70b-instruct,place of birth,open,1,False
+801964,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+6214547,qwen/qwen-2.5-72b-instruct,country,fallback,1,False
+5749211,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,True
+1069546,qwen/qwen-2.5-72b-instruct,religion,fallback,4,True
+2654950,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+1821506,qwen/qwen-2.5-72b-instruct,country,fallback,1,True
+994916,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,True
+5749211,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,True
+1821506,openai/gpt-4o-mini-2024-07-18,country,fallback,1,True
+384830,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,False
+6447500,openai/gpt-4o-mini-2024-07-18,place of birth,open,1,False
+4999192,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,True
+384830,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,False
+5749211,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,False
+164717,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,True
+2542370,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,True
+994916,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,False
+5939352,qwen/qwen-2.5-72b-instruct,director,open,0,False
+4999192,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,False
+2654950,qwen/qwen-2.5-72b-instruct,sport,fallback,3,True
+4999192,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,True
+2684047,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,True
+3900843,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,False
+3900843,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+2942698,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,True
+164717,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,False
+994916,qwen/qwen-2.5-72b-instruct,sport,fallback,1,True
+164717,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,True
+5635249,qwen/qwen-2.5-72b-instruct,composer,open,4,False
+2684047,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,True
+2684047,qwen/qwen-2.5-72b-instruct,religion,fallback,5,True
+384830,qwen/qwen-2.5-72b-instruct,religion,fallback,3,False
+2542370,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,False
+6447500,qwen/qwen-2.5-72b-instruct,place of birth,open,1,False
+1041192,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,True
+2480279,meta-llama/llama-3.3-70b-instruct,composer,open,1,False
+3719491,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+2480279,openai/gpt-4o-mini-2024-07-18,composer,open,1,False
+3719491,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,False
+1041192,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,True
+1980542,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,True
+2942698,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,True
+6416076,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,False
+2542370,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,False
+3900843,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+5676902,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,False
+1980542,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,True
+1980542,qwen/qwen-2.5-72b-instruct,sport,fallback,1,False
+2480279,qwen/qwen-2.5-72b-instruct,composer,open,1,False
+6416076,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,False
+6368178,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,True
+1041192,qwen/qwen-2.5-72b-instruct,place of birth,open,4,True
+2942698,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,True
+5676902,qwen/qwen-2.5-72b-instruct,place of birth,open,3,False
+6416076,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,False
+2218017,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+5973227,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+2410682,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,True
+6368178,qwen/qwen-2.5-72b-instruct,religion,fallback,5,True
+71982,meta-llama/llama-3.3-70b-instruct,occupation,fallback,5,True
+5973227,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+2218017,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+5676902,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,False
+6497094,meta-llama/llama-3.3-70b-instruct,country,fallback,1,True
+5973227,openai/gpt-4o-mini-2024-07-18,composer,open,2,False
+6368178,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,True
+3719491,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+2410682,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,False
+71982,qwen/qwen-2.5-72b-instruct,occupation,fallback,5,True
+30163,meta-llama/llama-3.3-70b-instruct,country,fallback,3,True
+2218017,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+71982,openai/gpt-4o-mini-2024-07-18,occupation,fallback,5,True
+1790865,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+2410682,qwen/qwen-2.5-72b-instruct,sport,fallback,2,False
+7069,meta-llama/llama-3.3-70b-instruct,country,fallback,1,True
+5111912,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+6497094,openai/gpt-4o-mini-2024-07-18,country,fallback,1,True
+1204905,meta-llama/llama-3.3-70b-instruct,occupation,fallback,0,True
+6497094,qwen/qwen-2.5-72b-instruct,country,fallback,1,True
+5111912,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+6422375,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,True
+5111912,qwen/qwen-2.5-72b-instruct,director,open,0,False
+1790865,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+30163,openai/gpt-4o-mini-2024-07-18,country,fallback,3,True
+7069,openai/gpt-4o-mini-2024-07-18,country,fallback,1,True
+2885537,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,True
+7069,qwen/qwen-2.5-72b-instruct,country,fallback,1,True
+1204905,qwen/qwen-2.5-72b-instruct,occupation,fallback,0,False
+4265197,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,False
+1204905,openai/gpt-4o-mini-2024-07-18,occupation,fallback,0,True
+1368385,meta-llama/llama-3.3-70b-instruct,occupation,fallback,2,True
+2281491,meta-llama/llama-3.3-70b-instruct,composer,open,0,True
+6422375,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,False
+4265197,meta-llama/llama-3.3-70b-instruct,occupation,fallback,1,True
+2885537,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,True
+4265197,openai/gpt-4o-mini-2024-07-18,occupation,fallback,1,True
+1368385,qwen/qwen-2.5-72b-instruct,occupation,fallback,2,False
+5030013,meta-llama/llama-3.3-70b-instruct,sport,fallback,1,False
+2281491,openai/gpt-4o-mini-2024-07-18,composer,open,0,True
+2281491,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+2885537,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,True
+3676450,meta-llama/llama-3.3-70b-instruct,sport,fallback,2,False
+30163,qwen/qwen-2.5-72b-instruct,country,fallback,3,True
+2303335,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,True
+1380246,meta-llama/llama-3.3-70b-instruct,composer,open,0,False
+2303335,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,False
+271520,meta-llama/llama-3.3-70b-instruct,country,fallback,3,True
+1368385,openai/gpt-4o-mini-2024-07-18,occupation,fallback,2,True
+3676450,openai/gpt-4o-mini-2024-07-18,sport,fallback,2,False
+5030013,openai/gpt-4o-mini-2024-07-18,sport,fallback,1,True
+1134304,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+1790865,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+6422375,qwen/qwen-2.5-72b-instruct,occupation,fallback,1,False
+1380246,openai/gpt-4o-mini-2024-07-18,composer,open,0,False
+1134304,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+3676450,qwen/qwen-2.5-72b-instruct,sport,fallback,2,False
+662253,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+271520,openai/gpt-4o-mini-2024-07-18,country,fallback,3,True
+662253,openai/gpt-4o-mini-2024-07-18,composer,open,0,False
+662253,meta-llama/llama-3.3-70b-instruct,composer,open,0,False
+2092231,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,True
+652728,meta-llama/llama-3.3-70b-instruct,director,open,0,False
+5030013,qwen/qwen-2.5-72b-instruct,sport,fallback,1,True
+652728,qwen/qwen-2.5-72b-instruct,director,open,0,False
+271520,qwen/qwen-2.5-72b-instruct,country,fallback,3,False
+6541952,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+2092231,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,True
+1134304,openai/gpt-4o-mini-2024-07-18,composer,open,2,False
+2277386,meta-llama/llama-3.3-70b-instruct,composer,open,1,True
+2303335,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,False
+652728,openai/gpt-4o-mini-2024-07-18,director,open,0,False
+378956,meta-llama/llama-3.3-70b-instruct,occupation,fallback,3,True
+2277386,openai/gpt-4o-mini-2024-07-18,composer,open,1,True
+1380246,qwen/qwen-2.5-72b-instruct,composer,open,0,False
+6541952,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+2092231,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,True
+6467772,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,True
+4124804,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+378956,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+5357751,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,True
+1663711,meta-llama/llama-3.3-70b-instruct,composer,open,1,False
+2277386,qwen/qwen-2.5-72b-instruct,composer,open,1,True
+6467772,qwen/qwen-2.5-72b-instruct,religion,fallback,5,True
+4124804,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+1770365,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,True
+6521985,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+1770365,qwen/qwen-2.5-72b-instruct,place of birth,open,3,True
+4124804,openai/gpt-4o-mini-2024-07-18,composer,open,2,False
+6467772,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,True
+6541952,qwen/qwen-2.5-72b-instruct,occupation,fallback,3,True
+378956,openai/gpt-4o-mini-2024-07-18,occupation,fallback,3,True
+6521985,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+1663711,openai/gpt-4o-mini-2024-07-18,composer,open,1,False
+5357751,qwen/qwen-2.5-72b-instruct,religion,fallback,4,False
+2311611,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,False
+1770365,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,True
+5357751,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,False
+2311611,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,False
+2311611,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,False
+3294276,meta-llama/llama-3.3-70b-instruct,composer,open,2,False
+4176391,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+1692428,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,False
+2203360,meta-llama/llama-3.3-70b-instruct,religion,fallback,5,False
+6530763,meta-llama/llama-3.3-70b-instruct,country,fallback,4,True
+37346,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,False
+4176391,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+1692428,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,False
+2004556,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+6530763,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+2203360,openai/gpt-4o-mini-2024-07-18,religion,fallback,5,False
+311244,meta-llama/llama-3.3-70b-instruct,composer,open,1,True
+6521985,qwen/qwen-2.5-72b-instruct,religion,fallback,0,False
+3294276,openai/gpt-4o-mini-2024-07-18,composer,open,2,False
+28857,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+1692428,qwen/qwen-2.5-72b-instruct,place of birth,open,3,False
+2203360,qwen/qwen-2.5-72b-instruct,religion,fallback,5,False
+1663711,qwen/qwen-2.5-72b-instruct,composer,open,1,False
+6530763,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+37346,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,False
+311244,qwen/qwen-2.5-72b-instruct,composer,open,1,False
+614717,meta-llama/llama-3.3-70b-instruct,composer,open,1,False
+2004556,qwen/qwen-2.5-72b-instruct,sport,fallback,3,True
+28857,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+2004556,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+28857,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,False
+311244,openai/gpt-4o-mini-2024-07-18,composer,open,1,False
+3294276,qwen/qwen-2.5-72b-instruct,composer,open,2,False
+4292396,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+4176391,qwen/qwen-2.5-72b-instruct,religion,fallback,0,False
+614717,qwen/qwen-2.5-72b-instruct,composer,open,1,False
+614717,openai/gpt-4o-mini-2024-07-18,composer,open,1,False
+6465152,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,True
+4715094,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+4715094,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+1547780,meta-llama/llama-3.3-70b-instruct,country,fallback,4,True
+5602485,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+6465152,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,False
+4292396,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+6465152,qwen/qwen-2.5-72b-instruct,religion,fallback,3,False
+6398294,meta-llama/llama-3.3-70b-instruct,place of birth,open,3,False
+4990707,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+1547780,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+1547780,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+4292396,qwen/qwen-2.5-72b-instruct,religion,fallback,0,True
+1990787,meta-llama/llama-3.3-70b-instruct,occupation,fallback,4,True
+4570888,meta-llama/llama-3.3-70b-instruct,religion,fallback,0,False
+37346,qwen/qwen-2.5-72b-instruct,place of birth,open,4,False
+4990707,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,True
+6398294,openai/gpt-4o-mini-2024-07-18,place of birth,open,3,True
+4570888,openai/gpt-4o-mini-2024-07-18,religion,fallback,0,False
+5602485,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,False
+4570888,qwen/qwen-2.5-72b-instruct,religion,fallback,0,False
+1528050,meta-llama/llama-3.3-70b-instruct,sport,fallback,5,True
+1990787,qwen/qwen-2.5-72b-instruct,occupation,fallback,4,True
+1809418,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+1528050,qwen/qwen-2.5-72b-instruct,sport,fallback,5,True
+4715094,qwen/qwen-2.5-72b-instruct,religion,fallback,0,False
+1809418,qwen/qwen-2.5-72b-instruct,sport,fallback,3,True
+5533209,meta-llama/llama-3.3-70b-instruct,country,fallback,4,True
+551428,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,False
+5602485,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+6398294,qwen/qwen-2.5-72b-instruct,place of birth,open,3,True
+4990707,qwen/qwen-2.5-72b-instruct,place of birth,open,5,False
+5533209,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+551428,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,False
+5887366,meta-llama/llama-3.3-70b-instruct,country,fallback,4,False
+1990787,openai/gpt-4o-mini-2024-07-18,occupation,fallback,4,True
+1528050,openai/gpt-4o-mini-2024-07-18,sport,fallback,5,True
+1809418,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+3414271,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,True
+4272302,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,False
+5533209,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+3821193,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,False
+1991283,qwen/qwen-2.5-72b-instruct,sport,fallback,4,False
+2900305,meta-llama/llama-3.3-70b-instruct,religion,fallback,4,False
+3821193,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,False
+5887366,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+2900305,qwen/qwen-2.5-72b-instruct,religion,fallback,4,False
+3414271,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,False
+2900305,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,False
+4272302,openai/gpt-4o-mini-2024-07-18,religion,fallback,4,False
+3457769,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+1991283,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,False
+1857340,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+4272302,qwen/qwen-2.5-72b-instruct,religion,fallback,4,False
+3457769,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+5887366,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+5470867,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,True
+3414271,qwen/qwen-2.5-72b-instruct,religion,fallback,4,False
+1857340,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+551428,qwen/qwen-2.5-72b-instruct,religion,fallback,1,False
+1545923,meta-llama/llama-3.3-70b-instruct,place of birth,open,4,False
+3821193,qwen/qwen-2.5-72b-instruct,place of birth,open,4,False
+3003917,meta-llama/llama-3.3-70b-instruct,country,fallback,4,True
+5470867,qwen/qwen-2.5-72b-instruct,sport,fallback,4,True
+3003917,openai/gpt-4o-mini-2024-07-18,country,fallback,4,True
+1545923,openai/gpt-4o-mini-2024-07-18,place of birth,open,4,False
+729239,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+1545923,qwen/qwen-2.5-72b-instruct,place of birth,open,4,False
+6032643,meta-llama/llama-3.3-70b-instruct,religion,fallback,2,False
+3457769,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,True
+256454,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,True
+5470867,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,True
+729239,qwen/qwen-2.5-72b-instruct,place of birth,open,5,True
+3003917,qwen/qwen-2.5-72b-instruct,country,fallback,4,True
+729239,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,True
+3071116,meta-llama/llama-3.3-70b-instruct,religion,fallback,3,False
+6438341,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,True
+5446730,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+1857340,qwen/qwen-2.5-72b-instruct,sport,fallback,3,True
+256454,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,True
+6484458,meta-llama/llama-3.3-70b-instruct,sport,fallback,3,True
+1753408,meta-llama/llama-3.3-70b-instruct,sport,fallback,4,True
+5446730,qwen/qwen-2.5-72b-instruct,sport,fallback,3,False
+6438341,qwen/qwen-2.5-72b-instruct,sport,fallback,4,True
+6032643,openai/gpt-4o-mini-2024-07-18,religion,fallback,2,False
+256454,qwen/qwen-2.5-72b-instruct,sport,fallback,4,True
+1753408,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,True
+1753408,qwen/qwen-2.5-72b-instruct,sport,fallback,4,True
+4088848,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,False
+6484458,qwen/qwen-2.5-72b-instruct,sport,fallback,3,True
+6438341,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,True
+6032643,qwen/qwen-2.5-72b-instruct,religion,fallback,2,False
+3071116,openai/gpt-4o-mini-2024-07-18,religion,fallback,3,False
+5446730,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+1660128,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+6484458,openai/gpt-4o-mini-2024-07-18,sport,fallback,3,True
+2552479,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+648601,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+3730009,meta-llama/llama-3.3-70b-instruct,place of birth,open,5,True
+2552479,qwen/qwen-2.5-72b-instruct,place of birth,open,5,False
+231636,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,False
+1551931,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,True
+1551931,meta-llama/llama-3.3-70b-instruct,religion,fallback,1,True
+1991283,openai/gpt-4o-mini-2024-07-18,sport,fallback,4,False
+648601,qwen/qwen-2.5-72b-instruct,place of birth,open,5,False
+1660128,qwen/qwen-2.5-72b-instruct,place of birth,open,5,True
+1660128,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,True
+3071116,qwen/qwen-2.5-72b-instruct,religion,fallback,3,False
+4088848,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,False
+2552479,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,False
+648601,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,True
+3730009,openai/gpt-4o-mini-2024-07-18,place of birth,open,5,False
+4088848,qwen/qwen-2.5-72b-instruct,religion,fallback,1,False
+3730009,qwen/qwen-2.5-72b-instruct,place of birth,open,5,True
+1551931,qwen/qwen-2.5-72b-instruct,religion,fallback,1,True
+231636,openai/gpt-4o-mini-2024-07-18,religion,fallback,1,False
+231636,qwen/qwen-2.5-72b-instruct,religion,fallback,1,False
