@@ -1,0 +1,191 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,margin=0.6in,top=0.55in,bottom=0.5in]{geometry}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,amssymb}
+\usepackage{enumitem,multicol}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{4pt}{1pt}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{0.6em}{}
+\setlist{nosep,leftmargin=1.1em}
+\setlength{\parskip}{1pt}
+\linespread{0.96}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\title{\vspace{-1.6em}\textbf{Right by Luck: Measuring When a Language Model's\\Correct Answer Is Not Knowledge}\vspace{-0.4em}}
+\author{Joel Suro Villalobos\\{\small AI $\times$ Epistemics Research Sprint (Apart Research), November 2026 --- \textit{study design, written before any data}}}
+\date{\vspace{-2.2em}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent A stopped clock shows the right time twice a day; look at it then and you hold a true, justified belief that is right only by luck, a \emph{Gettier case}. We ask how often a language model's correct answers are like this. Honesty and accuracy tests do not check whether an answer would stay right in a slightly different situation. We turn classic theories of knowledge into simple tests: the answer should survive rewording, change when a similar question has a different true answer, and come from a method that is right on nearby questions. Asking 3 models 500 questions with known answers, our main number is the share of correct answers that are right by luck. Because a test can find a failure but never prove there is none, this number is a \emph{minimum}; a statistical version of the $\varepsilon$--$\delta$ idea gives the opposite guarantee for a chosen set of rewordings. We test whether lucky answers lead to worse decisions, whether honesty tests or confidence spot them, and whether the model is as confident when the same luck fails. Written before any data; no results.
+\end{abstract}
+
+\section{The question}
+Knowledge is more than a true belief with a reason behind it. Two classic examples show why. The \textbf{stopped clock}: it shows 2:00, it is 2:00, but the clock stopped yesterday. The \textbf{fake-barn county}~\cite{goldman76}: you see a real barn, but most ``barns'' in the area are painted fronts. You are right, but in that place you could easily have been wrong. Both beliefs are true, believed and justified, yet not knowledge~\cite{gettier}. So we do not measure knowledge itself. We measure \textbf{how exposed a correct answer is to luck}.
+
+This matters for AI safety. On a test set, a lucky answer and a known answer look the same; they differ when the situation changes, and a widely used model meets changed situations all the time. Honesty tests such as MASK~\cite{mask} ask whether the model \emph{says what it believes}; accuracy tests ask whether the belief is \emph{true}. Neither asks whether it \emph{would stay true nearby}. ``Nearby'' has two directions. One is nearby \emph{inputs}: a reworded or neighbouring question (this study). The other is nearby \emph{versions of the model}: after a little fine-tuning or compression. The second is what work on \emph{durable} safeguards studies, such as RepNoise~\cite{repnoise} and TAR~\cite{tar}. Qi et al.~\cite{durability} show that such claims are easy to overstate unless they are limited to the changes actually tested. Our contribution is to treat both directions as one condition from epistemology: a belief is safe only if it would not easily have been false, whether the question changes or the model does. Prior work measures the two directions separately (ParaRel~\cite{pararel}; per-question agreement after compression~\cite{rababah}) or joins them without an account of knowledge (Dai et al.~\cite{dai}; Lopez-Paz~\cite{lopezpaz}). To our knowledge, no prior work turns the anti-luck condition into one test across nearby inputs and nearby models. Track~1 asks if honesty predicts better decisions; ours: \textbf{once we measure luck, does honesty still predict good decisions?}
+
+\section{What ``luck'' means here, and how we measure it}
+Luck here is \emph{not} randomness: we turn randomness off (temperature 0), and a stopped clock has none either. \par\medskip\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\textbf{Definition (Gettier answer).} A \emph{Gettier answer} is a correct answer that a model gives through a process that does not depend on the fact it was asked about. The process is usually right, so the answer looks justified. But here something other than the fact made this answer the model's most likely output: how common the answer is in general, how the question was worded, or a pattern that only tends to go with the truth. The answer is right by coincidence.}}\medskip
+
+\noindent\textbf{Two examples} (illustrative: the answers show the pattern we look for, not observed results).
+
+\begin{center}\footnotesize
+\begin{tabularx}{\linewidth}{@{}l Y l l l@{}}
+\toprule
+& Prompt & Model answer & True answer & \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Example 1, default luck}} \\
+Original & What sport does athlete A play? & association football & association football & \checkmark \\
+Neighbour & What sport does athlete B play? & association football & cricket & $\times$ \\
+\multicolumn{5}{@{}p{0.97\linewidth}}{\scriptsize The model gives the same answer whatever the truth is. 60\% of PopQA's sport questions have this answer, so the original was right because the answer is common, not because the model knew A.} \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{Example 2, wording luck}} \\
+Original & What is person P's occupation? & politician & politician & \checkmark \\
+Rewording (alias) & What did P's full name do for a living? & lawyer & politician & $\times$ \\
+\multicolumn{5}{@{}p{0.97\linewidth}}{\scriptsize Same person, same truth, different words. The right answer was tied to one phrasing, not to the person.} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\noindent Three remarks. (1) A Gettier answer is \emph{not knowledge}; ``Gettier knowledge'' is a contradiction, so we say Gettier \emph{answer} or \emph{right by luck}. (2) ``The most likely output'' does not tell knowledge from luck: every answer at temperature 0 is the most likely output. What matters is \emph{what made it likely}: the fact, or something else. (3) Not having the fact is one way to be lucky, not the only one. A model may hold a fact yet reach it only through one wording. We see three kinds, each caught by one test: \emph{default luck} (the most common answer, e.g.\ ``politician''; neighbour test), \emph{pattern luck} (a pattern that goes with the truth, e.g.\ capital = best-known city; neighbour test) and \emph{wording luck} (only some phrasings retrieve it; rewording test). From outside we infer the process from these traces; we do not see it (stage 2). The tests come from classic theories (Table~\ref{tab:defs}).
+
+\begin{table}[h]
+\centering\scriptsize\vspace{-0.4em}
+\begin{tabularx}{\linewidth}{@{}p{0.2\linewidth} Y Y@{}}
+\toprule
+Theory & The idea in plain words & Our test (fails $\Rightarrow$ right by luck) \\
+\midrule
+Safety (Sosa~\cite{sosa}; Williamson~\cite{williamson}) & You could not easily have been wrong. & \textbf{Rewording:} we ask the same question in 5 other ways. The answer must not change. \\
+Sensitivity (Nozick~\cite{nozick}) & If the truth were different, you would notice. & \textbf{Neighbours:} we ask 3 similar questions whose true answers differ. The answer must change. \\
+Reliability (Goldman~\cite{goldman}) & Your method is right most of the time \emph{in this kind of situation}. & \textbf{Local reliability:} the share of the 8 nearby questions (rewordings + neighbours) the model gets right. Reliable overall but not here: the fake barn. \\
+\bottomrule
+\end{tabularx}
+\caption{Theories of knowledge turned into tests. Rewording and neighbour tests decide the category; local reliability is a 0--1 score. Aptness, being right \emph{because of} skill (Sosa~\cite{sosa07}), needs a look inside the model (stage 2).}
+\label{tab:defs}\vspace{-1em}
+\end{table}
+
+\noindent\textbf{How a Gettier case is built} (Zagzebski's recipe~\cite{zagzebski}). (1) Take a good but imperfect way of forming beliefs. A clock usually shows the right time. From its training data, a model may learn a pattern: questions about a region's capital are usually answered with the region's best-known city. Often this is right. (2) Add bad luck that should make the belief false: the clock has stopped; the pattern responds to how famous a city is, not to whether it is the capital. (3) Add good luck that makes the belief true anyway: you look at exactly 2:00; asked about Massachusetts, the pattern says ``Boston'', which happens to be the capital. (4) The result is true, believed and justified (the pattern is usually right), but not knowledge. Our neighbour test catches it: asked about Illinois, the same pattern says ``Chicago'' (the capital is Springfield). This is an illustration, not a result. In our data, one fixed answer is already correct for 60\% of PopQA's sport questions (``association football''), 40\% of religion, 33\% of country (``United States'') and 24\% of occupation (``politician'') (our count). A model that falls back on that answer is often right by luck there. The lesson for AI safety, \emph{within the recipe}: lucky success and lucky failure come from the same method, and differ only by an accident of the world. From outside the model we cannot see the method, only its traces. The strongest trace is the same answer to questions with different truths (``United States'' for both towns): one input-blind rule explains both the success and the failure. A trace is not a proof. The model could know the fact and fail the neighbour for another reason, such as not knowing the other fact. Whether one internal process produces both is a question about the inside of the model (stage 2). What we can measure now: every right-by-luck answer has a nearby question the model gets wrong, by definition; how often that wrong answer is the very same answer (the share with the strongest trace); and whether the model is just as confident there (H4).
+
+\noindent\textbf{Three comparisons.} Each answer is \textbf{No luck found} (correct, passes both tests; not ``known'', see below), \textbf{Right by luck} (correct, fails at least one) or \textbf{Wrong}. A wrong answer whose rewordings are mostly right (at least 2 of 3) is \textbf{wrong by luck}: step 2 of the recipe, measured. Honesty is checked separately: does the model keep its answer when a user insists on a wrong one? An answer can be honest \emph{and} right by luck.
+
+\begin{table}[h]
+\centering\footnotesize\vspace{-0.4em}
+\begin{tabularx}{\linewidth}{@{}p{0.17\linewidth} Y Y Y@{}}
+\toprule
+The model\ldots & vs.\ the world & vs.\ what it believes (stage 2) & vs.\ nearby situations (\textbf{new}) \\
+\midrule
+says $p$; $p$ is true & Correct & Sincere & \textbf{No luck found}, or \textbf{right by luck} (Gettier) \\
+says $p$; $p$ is false & Error & Lie & \textbf{Wrong by luck} (right nearby), or does not know \\
+leaves out $p$; $p$ is true & Ignorance & Omission & -- \\
+\bottomrule
+\end{tabularx}
+\caption{The author's earlier world-vs-belief matrix plus a third comparison. This study fills the first and third columns; the second needs a look inside the model.}
+\label{tab:matrix}\vspace{-1em}
+\end{table}
+
+\noindent\textbf{Main number, and what it can guarantee.} The \textbf{luck rate} is the share of correct answers that are right by luck. A test can show that a failure exists; it cannot show that none exists. If a correct answer fails one rewording, the luck is real (once grading noise is removed). If it passes 5 rewordings, a sixth might still break it. So more tests can only raise the luck rate: it is a \textbf{minimum}. This is also why we write ``no luck found'' and not ``known''. It is the kind of claim Qi et al.~\cite{durability} ask for, limited to the changes actually tried.
+
+The opposite claim, ``this answer survives every nearby rewording'', has the shape of the $\varepsilon$--$\delta$ definition of a limit: \emph{for all} inputs close enough, the output stays the same. No finite test proves ``for all''. A statistical version can. Fix a set $D$ of rewordings that count as nearby, built along explicit axes (sentence structure, word choice, tone, subject alias; Section~4). Draw $n$ rewordings from $D$ at random. If a share $p$ of $D$ breaks the answer, the chance that none of the $n$ does is $(1-p)^n$. Setting this to 5\% gives the exact 95\% upper bound $p \le 1-0.05^{1/n}$ (Clopper--Pearson with zero failures), close to $3/n$, the ``rule of three''~\cite{hanley}: $n{=}30$ gives 9.5\%, $n{=}100$ gives 3\%. It rests on four assumptions, stated in advance: (i) the $n$ rewordings are drawn at random and independently from $D$, not chosen by hand; (ii) it covers $D$ only, so choosing $D$ is the real scientific work; (iii) it holds per question, so certifying 50 questions at 95\% each leaves about 2.5 wrong by chance (we report this, or correct for it); (iv) at temperature 0 each prompt has one fixed answer. Such certificates already exist for LLM correctness over prompt distributions~\cite{quacer,zollo}, and prompt sensitivity has been measured along explicit dimensions~\cite{dove,sclar,mizrahi}. What is new here is the reading: $D$ as an axis-structured neighbourhood of \emph{one} question, and the bound as a distribution-relative version of the epistemic safety condition, paired with the luck rate as its existential counterpart.
+
+\begin{table}[h]
+\centering\scriptsize\vspace{-0.4em}
+\begin{tabularx}{\linewidth}{@{}l Y Y Y@{}}
+\toprule
+Claim & Logical form & What is enough & Holds for \\
+\midrule
+Luck rate (minimum) & \emph{There exists} a nearby change that breaks the answer & One counterexample per answer & The changes we tried \\
+Statistical support ($\varepsilon$--$\delta$ style) & \emph{Almost every} change in $D$ keeps the answer & $n$ random draws from $D$, none breaks it: failure $\le 1-0.05^{1/n}\approx 3/n$ & The set $D$, at 95\% confidence \\
+\bottomrule
+\end{tabularx}
+\caption{Two guarantees. The first is the main result of this study; the second is an exploratory extension.}
+\label{tab:guar}\vspace{-1em}
+\end{table}
+
+\section{Why a method, not a benchmark}
+A fixed benchmark of Gettier cases defeats itself. Once it is published, its items enter the training data of later models. A later model can then pass them by \emph{recall}: it has seen these exact questions and answers. The test would then measure memory of the benchmark, not luck. For ordinary benchmarks, leaked items make scores too high; here they change \emph{what} is measured. Luck can only be measured on test cases the model has not seen.
+
+What must be unseen is the \emph{test}, not the fact. A model may well know that Boston is the capital of Massachusetts; what it must not have seen is the particular rewording, neighbour or decision task we use to check that knowledge. So our contribution is a \textbf{protocol for generating fresh tests}, not a fixed list of items. We report the generator used in this study, its settings and its results. We invite others to run the protocol with their own generators.
+
+This is Goodhart's law~\cite{goodhart,strathern,manheim}: when a measure becomes a target, it stops being a good measure. Here it cannot be avoided, because we must assume that every published test ends up in the training data of the next model. So the method must not depend on keeping any test secret. It must make the target move. A single public generator would itself become a target: a model trained on its outputs could pass its tests without tracking facts outside its set $D$. Training that makes a model pass fresh tests across a \emph{broad} $D$ is not a failure; it is the robustness we want. Goodhart bites only when $D$ is narrow. Hence three rules: tests are new on every run; many independent generators, each with its own $D$, are used, and agreement across them is the evidence; and evaluators may keep a generator private until it is used, like a sealed holdout. A generator follows the protocol if it (1) gives each test a correct answer by construction or from an independent source; (2) creates new tests for every run, with the random seed reported, and never reuses them for headline numbers; (3) states its set $D$ and its axes; (4) includes a control that should never change the answer and a condition where luck must appear; (5) is frozen before the run; and (6) adds, at every new evaluation, real facts that did not exist before the model's training cutoff. This last rule is a race against time. A model cannot know such a fact, so every correct answer on it is luck by construction: the cleanest check that the tests detect luck. Each new evaluation must take facts newer than the newest model tested.
+
+\section{Design}
+\textbf{Questions.} We take 500 questions from PopQA~\cite{popqa}, a public dataset of 14{,}267 questions with known answers from Wikidata. Each asks about one subject (``What is X's occupation?'') and records how famous it is. We sample 500 questions in two groups of 250. \emph{Fallback} questions come from the four kinds where one answer is often right (sport, religion, country, occupation). \emph{Open} questions come from kinds with hundreds of possible answers (director, author, composer, place of birth). This split is a built-in check: fallback questions must show more luck. If they do not, the tests are not measuring luck. We pick the fame band where the models get 40--80\% right, measured on the 30 practice items rather than assumed, and drop the 2\% of questions whose answer is written in the subject's name. \emph{Fresh-fact control:} 100 organisations from Wikidata founded after every tested model's training cutoff, asked ``In what country is X?'' (a first query returned 2{,}000 such organisations founded since March 2026). Names that give the country away (``Temp Insurance UK'') are dropped. Any correct answer here is luck, so the tests must flag nearly all of them (``2012 Georgetown Hoyas men's soccer team''). Neighbours come from the dataset too (same kind of question, similar fame, different true answer). A model writes rewordings, a wrong answer for the pressure prompt and a decision task; a second model checks them, and we check 30 by hand.
+
+\textbf{Models: old on purpose.} We use three widely used, inexpensive models from different families through OpenRouter: GPT-4o-mini (2024-07-18 snapshot), Llama-3.3-70B-Instruct and Qwen2.5-72B-Instruct (the family used in stage~2). Their training cutoffs fall in 2023--2024 (to be confirmed from each model's documentation). A model stops gathering facts at its cutoff, so for these models any fact from 2026 is unknown with more than a year of margin, and the fresh-fact control needs no race. The race of rule~6 applies to the newest models. For every call we record the model identifier, the provider that served it, every request parameter (temperature 0, top-$p$ 1, maximum length, seed where supported), the response identifier and the time; the provider is fixed per model with fallbacks disabled. One source of error we cannot control: the provider's hardware, load balancing and batching, which can change outputs even at temperature 0. We do not assume it away; we measure it. For 100 items the identical neutral prompt is sent 3 times, and the share of answers that change with nothing changed joins the noise floor. All call logs are released.
+
+\textbf{What we ask each model} (3 models, 12 prompts per item): the question with a 0--100 confidence; 5 rewordings (at least one per axis); 3 neighbours; a \emph{control} (only punctuation changed); a \emph{pressure} prompt (``my manager is sure the answer is X''); and a four-option practical \emph{decision} that follows from the fact. \emph{Rewordings} are written by a model along four axes, one or more per rewording: sentence structure (``What did X do for a living?''), word choice (``profession'' for ``occupation''), tone (casual or formal) and the subject's \emph{alias} from PopQA's own alias list (``George James Rankin'' for ``George Rankin''). None of these changes the true answer, so an answer that changes was tied to the wording, not the fact. The alias axis matters most: it checks that the model tracks the person, not the string. A second model checks that each rewording keeps the meaning. If the original PopQA question was memorized as a string, a rewording exposes that too. Rewordings, neighbour pairings and decision tasks are generated fresh for this run (seed reported) and not reused. Prompts and grading are fixed on 30 practice items, then frozen for the other 470. \emph{Exploratory extension, if time allows:} 50 items $\times$ 30 rewordings drawn at random along the four axes, with every failure checked by hand (with 30 checks, a 1\% grading error alone would fake a failure in 26\% of items), giving the statistical support of Table~\ref{tab:guar} and a first map of which axes break answers most.
+
+\textbf{What counts as evidence.} The control and a hand check of the grader tell us how many failures are noise; the luck rate counts as real only if it stays above that level. Every result gets a 95\% confidence interval (we resample the questions 2{,}000 times). Each hypothesis has a \emph{smallest effect that would matter}, fixed in advance. A hypothesis is \textbf{supported} if the whole interval is beyond that size, \textbf{refuted} if the whole interval is below it, and \textbf{inconclusive} otherwise. All rules are saved before any model is queried.
+\begin{itemize}
+\item \textbf{H1.} Right-by-luck answers lead to more wrong decisions than no-luck-found answers on questions of equal difficulty (subject fame). Smallest effect: 10 points of decision accuracy.
+\item \textbf{H2.} The luck measures (rewording, neighbour, local reliability) predict decision errors better than the honesty test. Smallest effect: 0.05 in ranking accuracy (AUC). Fairness check: luck built from one rewording only.
+\item \textbf{H3.} The model's confidence does not separate lucky from no-luck-found answers: a no-luck-found answer gets the higher confidence less than 70\% of the time.
+\item \textbf{H4.} When a lucky answer has a wrong nearby answer, the model's confidence in the wrong one is not lower than in the right one (within 5 points of 100).
+\item Wrong-by-luck answers are reported without a hypothesis.
+\end{itemize}
+
+\begin{table}[h]
+\centering\scriptsize\vspace{-0.3em}
+\begin{tabularx}{\linewidth}{@{}l Y Y@{}}
+\toprule
+& If supported & If refuted \\
+\midrule
+Luck rate & Accuracy overstates knowledge. & Correct answers here are robust; try harder settings. \\
+H1 & Luck is a decision risk that accuracy hides. & Lucky answers decide as well as the others here; luck matters less than feared for this kind of task. \\
+H2 & Honesty under pressure misses a risk that luck tests catch. & Honesty carries the decision signal; luck adds little beyond it. \\
+H3 & Stated confidence cannot be used to find lucky answers. & Confidence is a cheap way to flag lucky answers. \\
+H4 & Lucky failure comes with full confidence: the model gives no warning. & The model's confidence drops when it fails nearby: a usable warning sign. \\
+\bottomrule
+\end{tabularx}
+\caption{What each result would mean. ``Inconclusive'': the pilot was too small to tell.}
+\label{tab:outcomes}\vspace{-1em}
+\end{table}
+
+\textbf{Checking our own reasoning.} Writing each step from result to conclusion as an argument, four premises failed in the first draft; all are fixed above: grading noise looks like luck (5\% grading error over 4 checks gives about 19\% false failures); lucky answers may be harder (we match difficulty); the decision task is partly a rewording (it needs a reasoning step); one pressure prompt is not an honesty benchmark (we claim only what we test). \textbf{Limits:} no comparison with people; a neighbour failure can mean the model does not know the other fact; we see outputs, not internal states.
+
+\section{What comes next}
+\textbf{Stage 2} (GPU) looks inside an open model (Qwen2.5-7B)~\cite{marks,burns} to test aptness, whether the model is right \emph{because of} what it knows, and to replace stated confidence with a check of whether its own reasons form a valid argument. It also moves from facts to \emph{environments}: in a model's environment (retrieved pages, users, other agents) fake barns can be planted, including true statements that mislead (Grice), so step~2 of the recipe can be produced by design. \textbf{Stage 3} tests the second direction of ``nearby'': are the answers that are lucky under rewording the same ones that flip after light fine-tuning or compression? If so, a cheap input test predicts an expensive durability test. Durable-safeguard work asks this about refusals; we ask it about knowledge. Further generators can drop public facts entirely: Gettier cases written into the prompt with invented entities, or numerical shortcuts (``odd and not ending in 5 means prime'') whose difficulty grows with the numbers~\cite{gsmsym,dyval,livebench}.
+
+\vspace{-0.6em}
+{\scriptsize
+\renewcommand{\refname}{\normalsize References}
+\begin{multicols}{2}\begin{thebibliography}{9}\setlength{\itemsep}{0pt}
+\bibitem{gettier} E.~Gettier. Is justified true belief knowledge? \textit{Analysis} 23(6):121--123, 1963.
+\bibitem{goldman76} A.~Goldman. Discrimination and perceptual knowledge. \textit{Journal of Philosophy} 73(20), 1976.
+\bibitem{zagzebski} L.~Zagzebski. The inescapability of Gettier problems. \textit{Philosophical Quarterly} 44(174), 1994.
+\bibitem{nozick} R.~Nozick. \textit{Philosophical Explanations}. Harvard University Press, 1981.
+\bibitem{sosa} E.~Sosa. How to defeat opposition to Moore. \textit{Philosophical Perspectives} 13, 1999.
+\bibitem{sosa07} E.~Sosa. \textit{A Virtue Epistemology}. Oxford University Press, 2007.
+\bibitem{williamson} T.~Williamson. \textit{Knowledge and Its Limits}. Oxford University Press, 2000.
+\bibitem{goldman} A.~Goldman. What is justified belief? In \textit{Justification and Knowledge}, 1979.
+\bibitem{mask} R.~Ren et al. The MASK benchmark. arXiv:2503.03750, 2025.
+\bibitem{popqa} A.~Mallen et al. When not to trust language models (PopQA). ACL 2023; arXiv:2212.10511.
+\bibitem{repnoise} D.~Rosati et al. Representation noising: A defence mechanism against harmful finetuning. arXiv:2405.14577, 2024.
+\bibitem{tar} R.~Tamirisa et al. Tamper-resistant safeguards for open-weight LLMs. arXiv:2408.00761, 2024.
+\bibitem{durability} X.~Qi et al. On evaluating the durability of safeguards for open-weight LLMs. arXiv:2412.07097, 2024.
+\bibitem{pararel} Y.~Elazar et al. Measuring and improving consistency in pretrained language models. arXiv:2102.01017, 2021.
+\bibitem{rababah} B.~Rababah et al. The illusion of equivalency: Statistical characterization of quantization effects in LLMs. arXiv:2607.08734, 2026.
+\bibitem{dai} R.~Dai et al. Breach in the shield: Unveiling the vulnerabilities of large language models. arXiv:2504.03714, 2025.
+\bibitem{lopezpaz} D.~Lopez-Paz. Against all likelihood. arXiv:2611.09385, 2026.
+\bibitem{hanley} J.~Hanley, A.~Lippman-Hand. If nothing goes wrong, is everything all right? Interpreting zero numerators. \textit{JAMA} 249(13):1743--1745, 1983.
+\bibitem{quacer} I.~Chaudhary, V.~Jain, G.~Singh. Certifying knowledge comprehension in LLMs. arXiv:2402.15929, 2024.
+\bibitem{zollo} T.~Zollo et al. Prompt risk control. arXiv:2311.13628, 2023.
+\bibitem{dove} E.~Habba et al. DOVE: A large-scale multi-dimensional predictions dataset. arXiv:2503.01622, 2025.
+\bibitem{sclar} M.~Sclar et al. Quantifying language models' sensitivity to spurious features in prompt design. arXiv:2310.11324, 2023.
+\bibitem{mizrahi} M.~Mizrahi et al. State of what art? A call for multi-prompt LLM evaluation. arXiv:2401.00595, 2024.
+\bibitem{gsmsym} I.~Mirzadeh et al. GSM-Symbolic. arXiv:2410.05229, 2024.
+\bibitem{dyval} K.~Zhu et al. DyVal: Dynamic evaluation of large language models for reasoning tasks. arXiv:2309.17167, 2023.
+\bibitem{livebench} C.~White et al. LiveBench: A challenging, contamination-limited LLM benchmark. arXiv:2406.19314, 2024.
+\bibitem{goodhart} C.~Goodhart. Problems of monetary management: The U.K. experience. \textit{Papers in Monetary Economics}, Reserve Bank of Australia, 1975.
+\bibitem{strathern} M.~Strathern. `Improving ratings': audit in the British university system. \textit{European Review} 5(3):305--321, 1997.
+\bibitem{manheim} D.~Manheim and S.~Garrabrant. Categorizing variants of Goodhart's law. arXiv:1803.04585, 2018.
+\bibitem{marks} S.~Marks and M.~Tegmark. The geometry of truth. arXiv:2310.06824, 2023.
+\bibitem{burns} C.~Burns et al. Discovering latent knowledge without supervision. arXiv:2212.03827, 2022.
+\end{thebibliography}\end{multicols}}
+\end{document}
